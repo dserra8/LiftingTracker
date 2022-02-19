@@ -11,13 +11,13 @@ android {
     compileSdk 31
 
     defaultConfig {
-        applicationId "com.example.baseproject"
+        applicationId "com.example.liftingtracker"
         minSdk 24
         targetSdk 31
         versionCode 1
         versionName "1.0"
 
-        testInstrumentationRunner "com.example.baseproject.HiltTestRunner"
+        testInstrumentationRunner "com.example.liftingtracker.HiltTestRunner"
     }
 
     buildFeatures {
