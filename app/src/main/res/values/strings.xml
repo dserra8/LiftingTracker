@@ -1,3 +1,13 @@
 <resources>
     <string name="app_name">BaseProject</string>
+    <string name="dummy_button">Dummy Button</string>
+    <string name="dummy_content">DUMMY\nCONTENT</string>
+    <string name="get_started">Get Started</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="number_of_days_for_split">Number of Days for Split</string>
+    <string name="day_num_text">Day %d</string>
+    <string name="next">Next</string>
+    <string name="finish">Finish</string>
+    <string name="choose_muscle_groups">Choose Muscle Groups for Day %d</string>
 </resources>

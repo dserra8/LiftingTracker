@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="?attr/fullscreenBackgroundColor"
+    android:paddingTop="15dp"
+    android:theme="@style/ThemeOverlay.LiftingTracker.FullscreenContainer"
+    tools:context=".SelectMuscleGroup">
+
+    <TextView
+        android:id="@+id/muscleGroupTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/choose_muscle_groups"
+        android:textSize="25sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toTopOf="@+id/muscleChipGroup"
+        app:layout_constraintEnd_toEndOf="@+id/muscleChipGroup"
+        app:layout_constraintStart_toStartOf="@+id/muscleChipGroup"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_chainStyle="spread" />
+
+
+    <com.google.android.material.chip.ChipGroup
+        android:id="@+id/muscleChipGroup"
+        android:layout_width="match_parent"
+        android:layout_height="550dp"
+        android:paddingStart="10dp"
+        android:paddingEnd="10dp"
+        app:chipSpacingHorizontal="15dp"
+        app:chipSpacing="20dp"
+        app:layout_constraintBottom_toTopOf="@+id/finishMuscleGroupButton"
+        app:layout_constraintTop_toBottomOf="@+id/muscleGroupTitle"
+        app:selectionRequired="true">
+
+    </com.google.android.material.chip.ChipGroup>
+
+    <Button
+        android:id="@+id/finishMuscleGroupButton"
+        android:layout_width="200dp"
+        android:layout_height="wrap_content"
+        android:background="@drawable/get_started_button"
+        android:text="@string/finish"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="@+id/muscleChipGroup"
+        app:layout_constraintStart_toStartOf="@+id/muscleChipGroup"
+        app:layout_constraintTop_toBottomOf="@+id/muscleChipGroup" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

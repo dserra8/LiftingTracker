@@ -2,7 +2,7 @@ package com.example.liftingtracker.di
 
 import android.app.Application
 import androidx.room.Room
-import com.example.liftingtracker.core.data.local.GeneralDatabase
+import com.example.liftingtracker.core.data.local.LiftingDatabase
 import dagger.Module
 import dagger.Provides
 import dagger.hilt.InstallIn
@@ -15,10 +15,10 @@ object DatabaseModule {
 
     @Provides
     @Singleton
-    fun provideDatabase(app: Application): GeneralDatabase =
+    fun provideDatabase(app: Application): LiftingDatabase =
         Room.databaseBuilder(
             app,
-            GeneralDatabase::class.java,
-            "general_database"
+            LiftingDatabase::class.java,
+            "lifting_database"
         ).fallbackToDestructiveMigration().build()
 }

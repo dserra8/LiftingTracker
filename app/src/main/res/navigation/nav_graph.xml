@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/getStartedFragment">
+
+    <fragment
+        android:id="@+id/getStartedFragment"
+        android:name="com.example.liftingtracker.feature_create_schedule.presentation.GetStartedFragment"
+        android:label="fragment_get_started"
+        tools:layout="@layout/fragment_get_started" >
+        <action
+            android:id="@+id/action_getStartedFragment_to_createSchedule"
+            app:destination="@id/createSchedule" />
+    </fragment>
+    <fragment
+        android:id="@+id/createSchedule"
+        android:name="com.example.liftingtracker.feature_create_schedule.presentation.CreateSchedule"
+        android:label="fragment_create_schedule"
+        tools:layout="@layout/fragment_create_schedule" >
+        <action
+            android:id="@+id/action_createSchedule_to_selectMuscleGroup"
+            app:destination="@id/selectMuscleGroup" />
+    </fragment>
+    <fragment
+        android:id="@+id/selectMuscleGroup"
+        android:name="com.example.liftingtracker.SelectMuscleGroup"
+        android:label="fragment_select_muscle_group"
+        tools:layout="@layout/fragment_select_muscle_group" >
+        <argument
+            android:name="dayNum"
+            app:argType="integer"
+            android:defaultValue="0" />
+        <action
+            android:id="@+id/action_selectMuscleGroup_to_createSchedule"
+            app:destination="@id/createSchedule" />
+    </fragment>
+
+</navigation>
