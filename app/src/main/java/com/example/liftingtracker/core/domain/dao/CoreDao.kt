@@ -2,16 +2,15 @@ package com.example.liftingtracker.core.domain.dao
 
 import androidx.room.*
 import com.example.liftingtracker.core.domain.models.User
+import com.example.liftingtracker.core.domain.models.UserWithExercises
 import com.example.liftingtracker.core.domain.models.UserWithWorkoutPlans
+import retrofit2.http.GET
 
 @Dao
 interface CoreDao {
-
     @Insert(onConflict = OnConflictStrategy.REPLACE)
-    suspend fun insertUser(user: User)
+    suspend fun insertUser(user: User): Long
 
-    @Transaction
-    @Query("SELECT * FROM User WHERE userId=:id")
-    suspend fun loadUserAndWorkoutPlans(id: Long): UserWithWorkoutPlans
-
+    @Query("SELECT * FROM user")
+    suspend fun getUser(): User?
 }

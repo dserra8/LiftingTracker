@@ -6,6 +6,7 @@ import androidx.room.PrimaryKey
 @Entity
 data class Exercise(
     @PrimaryKey val exerciseId: Long,
+    val userCreatorId: Long,
     val name: String,
     val targetMuscles: String
 )

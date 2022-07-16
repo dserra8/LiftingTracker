@@ -20,5 +20,8 @@ object DatabaseModule {
             app,
             LiftingDatabase::class.java,
             "lifting_database"
-        ).fallbackToDestructiveMigration().build()
+        )
+            .createFromAsset("database/user.db")
+            .fallbackToDestructiveMigration()
+            .build()
 }

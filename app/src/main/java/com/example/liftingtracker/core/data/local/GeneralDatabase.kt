@@ -24,6 +24,4 @@ abstract class LiftingDatabase : RoomDatabase() {
     //Declare Daos
     abstract fun coreDao(): CoreDao
     abstract fun createScheduleDao(): CreateScheduleDao
-
-
 }

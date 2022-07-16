@@ -1,9 +1,5 @@
 package com.example.liftingtracker.core.data.local
 
-import com.example.liftingtracker.core.domain.models.Brand
-import com.example.liftingtracker.core.domain.models.Exercise
-import com.example.liftingtracker.core.domain.models.Type
-
 object ListOfExercises {
 
 //    val exerciseList = listOf<Exercise>(
