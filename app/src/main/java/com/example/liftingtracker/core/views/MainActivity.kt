@@ -1,17 +1,18 @@
-package com.example.liftingtracker.core.presentation
+package com.example.liftingtracker.core.views
 
 import android.os.Bundle
 import androidx.activity.ComponentActivity
 import androidx.activity.compose.setContent
 import androidx.activity.viewModels
+import androidx.compose.foundation.ExperimentalFoundationApi
 import androidx.compose.material.ExperimentalMaterialApi
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.navigation.compose.NavHost
 import androidx.navigation.compose.composable
 import androidx.navigation.compose.rememberNavController
-import com.example.liftingtracker.feature_create_schedule.presentation.CreateScheduleScreen
-import com.example.liftingtracker.feature_create_schedule.presentation.GetStartedScreen
+import com.example.liftingtracker.feature_create_schedule.views.createschedule.CreateScheduleScreen
+import com.example.liftingtracker.feature_create_schedule.views.GetStartedScreen
 import dagger.hilt.android.AndroidEntryPoint
 
 @ExperimentalMaterialApi
@@ -27,6 +28,7 @@ class MainActivity : ComponentActivity() {
         }
     }
 
+    @OptIn(ExperimentalFoundationApi::class)
     @Preview
     @Composable
     fun Main() {

@@ -1,4 +1,4 @@
-package com.example.liftingtracker.core.presentation
+package com.example.liftingtracker.core.views
 
 import androidx.compose.material.Switch
 import androidx.compose.runtime.*

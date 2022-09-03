@@ -14,7 +14,7 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.BaseProject">
         <activity
-            android:name="com.example.liftingtracker.core.presentation.MainActivity"
+            android:name="com.example.liftingtracker.core.views.MainActivity"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />

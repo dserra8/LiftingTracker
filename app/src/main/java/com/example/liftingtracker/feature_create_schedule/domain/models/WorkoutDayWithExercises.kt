@@ -8,7 +8,7 @@ import com.example.liftingtracker.core.domain.models.Exercise
 data class WorkoutDayWithExercises(
     @Embedded val workoutDay: WorkoutDay,
     @Relation(
-        parentColumn = "dayId",
+        parentColumn = "id",
         entityColumn = "exerciseId",
         associateBy = Junction(WorkoutDayExerciseCrossRef::class)
     )

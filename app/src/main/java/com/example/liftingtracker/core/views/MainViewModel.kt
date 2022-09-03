@@ -1,4 +1,4 @@
-package com.example.liftingtracker.core.presentation
+package com.example.liftingtracker.core.views
 
 import androidx.lifecycle.ViewModel
 import com.example.leagueapp1.util.DispatcherProvider

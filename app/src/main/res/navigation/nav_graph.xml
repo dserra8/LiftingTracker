@@ -7,7 +7,7 @@
 
     <fragment
         android:id="@+id/getStartedFragment"
-        android:name="com.example.liftingtracker.feature_create_schedule.presentation.GetStartedFragment"
+        android:name="com.example.liftingtracker.feature_create_schedule.views.GetStartedFragment"
         android:label="fragment_get_started"
         tools:layout="@layout/fragment_get_started" >
         <action
@@ -16,7 +16,7 @@
     </fragment>
     <fragment
         android:id="@+id/createSchedule"
-        android:name="com.example.liftingtracker.feature_create_schedule.presentation.CreateSchedule"
+        android:name="com.example.liftingtracker.feature_create_schedule.views.CreateSchedule"
         android:label="fragment_create_schedule"
         tools:layout="@layout/fragment_create_schedule" >
         <action

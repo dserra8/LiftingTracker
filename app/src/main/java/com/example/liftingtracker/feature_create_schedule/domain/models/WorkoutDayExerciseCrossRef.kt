@@ -2,8 +2,8 @@ package com.example.liftingtracker.feature_create_schedule.domain.models
 
 import androidx.room.Entity
 
-@Entity(primaryKeys = ["dayId", "exerciseId"])
+@Entity(primaryKeys = ["id", "exerciseId"])
 data class WorkoutDayExerciseCrossRef(
-    val dayId: Long,
+    val id: Long,
     val exerciseId: Long
 )

@@ -1,4 +1,4 @@
-package com.example.liftingtracker.core.presentation
+package com.example.liftingtracker.core.views
 
 import androidx.compose.foundation.isSystemInDarkTheme
 import androidx.compose.material.MaterialTheme

@@ -1,13 +1,12 @@
-package com.example.liftingtracker.feature_create_schedule.presentation
+package com.example.liftingtracker.feature_create_schedule.views
 
 import androidx.compose.foundation.layout.*
 import androidx.compose.material.Surface
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
-import androidx.compose.ui.tooling.preview.Preview
 import androidx.navigation.NavController
-import com.example.liftingtracker.core.presentation.StandardButton
+import com.example.liftingtracker.core.views.StandardButton
 
 @Composable
 fun GetStartedScreen(navController: NavController) {

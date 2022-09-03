@@ -5,9 +5,10 @@ import androidx.room.PrimaryKey
 
 @Entity
 data class WorkoutDay(
-    @PrimaryKey(autoGenerate = true) val dayId: Long = 0,
-    val dayNum: Int,
+    @PrimaryKey
+    val id: String,
+    var dayNum: Int,
     val workoutPlanId: Long,
-    val title: String = "",
+    var title: String = "",
     val isRest: Boolean = false
 )

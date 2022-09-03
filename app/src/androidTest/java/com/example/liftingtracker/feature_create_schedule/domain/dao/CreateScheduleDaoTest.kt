@@ -18,8 +18,6 @@ import org.junit.After
 import org.junit.Before
 import org.junit.Rule
 import org.junit.Test
-import org.junit.experimental.runners.Enclosed
-import org.junit.runner.RunWith
 import javax.inject.Inject
 
 
@@ -70,31 +68,31 @@ class CreateScheduleDaoTest {
         //Creating test workout days
         listOfDays = mutableListOf(
             WorkoutDay(
-                dayId = 1,
+                id = 1,
                 dayNum = 1,
                 workoutPlanId = plan1.planId,
                 title = "Push",
             ),
             WorkoutDay(
-                dayId = 2,
+                id = 2,
                 dayNum = 2,
                 workoutPlanId = plan1.planId,
                 title = "Pull",
             ),
             WorkoutDay(
-                dayId = 3,
+                id = 3,
                 dayNum = 3,
                 workoutPlanId = plan1.planId,
                 title = "Legs",
             ),
             WorkoutDay(
-                dayId = 4,
+                id = 4,
                 dayNum = 4,
                 workoutPlanId = plan1.planId,
                 title = "Rest",
             ),
             WorkoutDay(
-                dayId = 5,
+                id = 5,
                 dayNum = 1,
                 workoutPlanId = 2,
                 title = "Rest",
@@ -210,7 +208,7 @@ class CreateScheduleDaoTest {
         assertThat(res.plan).isEqualTo(plan1)
         res.workoutDays.forEach {
             assertThat(it.workoutDay.workoutPlanId).isEqualTo(plan1.planId)
-            assertThat(it.exercises.size).isEqualTo(countOfExercisesPerDay[it.workoutDay.dayId.toInt()-1])
+            assertThat(it.exercises.size).isEqualTo(countOfExercisesPerDay[it.workoutDay.id.toInt()-1])
         }
     }
 

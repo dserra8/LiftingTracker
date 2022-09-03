@@ -26,7 +26,7 @@ interface CreateScheduleDao {
     suspend fun getPlanWithWorkoutDays(id: Long): PlanWithWorkoutDays?
 
     @Transaction
-    @Query("SELECT * FROM WorkoutDay WHERE dayId=:id")
+    @Query("SELECT * FROM WorkoutDay WHERE id=:id")
     suspend fun getWorkoutDayWithExercises(id: Long): WorkoutDayWithExercises?
 
     @Transaction
