@@ -1,6 +1,6 @@
 package com.example.liftingtracker.feature_create_schedule.domain.use_cases
 
-import com.example.liftingtracker.core.domain.dao.CoreDao
+import com.example.liftingtracker.core.dao.CoreDao
 import com.example.liftingtracker.feature_create_schedule.domain.dao.CreateScheduleDao
 import com.example.liftingtracker.feature_create_schedule.domain.models.WorkoutPlan
 
@@ -13,6 +13,5 @@ class CreateWorkoutPlanUseCase(
         val user = coreDao.getUser()!!
         createScheduleDao.insertWorkoutPlan(WorkoutPlan(userCreatorId = user.userId, planName = planName))
     }
-
 
 }

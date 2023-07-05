@@ -1,27 +1,47 @@
 package com.example.liftingtracker.di
 
-import android.app.Application
-import androidx.room.Room
-import com.example.liftingtracker.core.data.local.LiftingDatabase
-import dagger.Module
-import dagger.Provides
-import dagger.hilt.InstallIn
-import dagger.hilt.components.SingletonComponent
-import javax.inject.Singleton
+import com.example.liftingtracker.core.dao.CoreDao
+import com.example.liftingtracker.core.data.local.DatabaseHelper
+import org.koin.android.ext.koin.androidContext
+import org.koin.dsl.module
 
-@Module
-@InstallIn(SingletonComponent::class)
 object DatabaseModule {
 
-    @Provides
-    @Singleton
-    fun provideDatabase(app: Application): LiftingDatabase =
-        Room.databaseBuilder(
-            app,
-            LiftingDatabase::class.java,
-            "lifting_database"
-        )
-            .createFromAsset("database/user.db")
-            .fallbackToDestructiveMigration()
-            .build()
+    val databaseModule = module {
+        // Rooms Database
+        single {
+            DatabaseHelper.buildDatabase(
+                context = androidContext()
+            )
+        }
+        single {
+            val db : DatabaseHelper = get()
+            db.coreDao()
+        }
+        single {
+            val db : DatabaseHelper = get()
+            db.createScheduleDao()
+        }
+        single {
+            val db : DatabaseHelper = get()
+            db.workoutLogItemDao()
+        }
+        single {
+            val db : DatabaseHelper = get()
+            db.exerciseDao()
+        }
+        single {
+            val db : DatabaseHelper = get()
+            db.exerciseLogDao()
+        }
+        single {
+            val db : DatabaseHelper = get()
+            db.exerciseBrandCrossRefDao()
+        }
+        single {
+            val db : DatabaseHelper = get()
+            db.brandDao()
+        }
+    }
 }
+

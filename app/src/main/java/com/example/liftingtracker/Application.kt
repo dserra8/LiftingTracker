@@ -1,12 +1,14 @@
 package com.example.liftingtracker
 
 import android.app.Application
-import dagger.hilt.android.HiltAndroidApp
+import com.example.liftingtracker.di.AppModule
+import org.koin.android.ext.koin.androidContext
+import org.koin.android.ext.koin.androidLogger
+import org.koin.core.context.startKoin
 import timber.log.Timber.*
 import timber.log.Timber.Forest.plant
 
 
-@HiltAndroidApp
 class Application: Application() {
 
     override fun onCreate() {
@@ -14,6 +16,12 @@ class Application: Application() {
 
         if (BuildConfig.DEBUG) {
             plant(DebugTree())
+        }
+
+        startKoin {
+            androidLogger()
+            androidContext(this@Application)
+            modules(AppModule.appModule)
         }
     }
 }

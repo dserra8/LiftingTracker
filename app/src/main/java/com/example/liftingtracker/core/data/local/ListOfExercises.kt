@@ -14,6 +14,4 @@ object ListOfExercises {
 //        Exercise(name = "Lateral Raise", type = Type.DUMBBELL, brand = Brand.NOBRAND),
 //        Exercise(name = "Front Raise", type = Type.DUMBBELL, brand = Brand.NOBRAND),
 //    )
-
-
 }

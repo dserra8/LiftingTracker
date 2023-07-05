@@ -1,26 +1,24 @@
 package com.example.liftingtracker.feature_create_schedule.views.createschedule.components
 
-import androidx.compose.foundation.layout.*
+import androidx.compose.foundation.layout.Arrangement
+import androidx.compose.foundation.layout.Row
+import androidx.compose.foundation.layout.fillMaxWidth
+import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.shape.CornerSize
 import androidx.compose.foundation.shape.RoundedCornerShape
-import androidx.compose.material.Card
-import androidx.compose.material.ExperimentalMaterialApi
-import androidx.compose.material.MaterialTheme
-import androidx.compose.material.Text
+import androidx.compose.material3.*
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.tooling.preview.Preview
-import androidx.compose.ui.unit.Dp
 import androidx.compose.ui.unit.dp
-import com.example.liftingtracker.feature_create_schedule.domain.models.WorkoutDay
+import com.example.liftingtracker.workout.models.WorkoutDay
 
-@ExperimentalMaterialApi
 @Composable
 fun WorkoutDayItem(
     item: WorkoutDay,
-    elevation: Dp,
-    onClick: () -> Unit) {
+    elevation: CardElevation = CardDefaults.elevatedCardElevation(),
+) {
     Card(
         modifier = Modifier
             .fillMaxWidth()
@@ -28,7 +26,6 @@ fun WorkoutDayItem(
         ,
         elevation = elevation,
         shape = RoundedCornerShape(corner = CornerSize(16.dp)),
-        onClick = onClick
     ) {
         Row(
             verticalAlignment = Alignment.CenterVertically,
@@ -39,12 +36,12 @@ fun WorkoutDayItem(
         ) {
             Text(
                 text = item.title,
-                style = MaterialTheme.typography.h6,
+                style = MaterialTheme.typography.labelSmall,
             )
 
             Text(
                 text = item.dayNum.toString(),
-                style = MaterialTheme.typography.h5
+                style = MaterialTheme.typography.labelSmall
             )
 
 
@@ -53,7 +50,6 @@ fun WorkoutDayItem(
 }
 
 @Preview
-@ExperimentalMaterialApi
 @Composable
 fun WorkoutDayPreview() {
     val item = WorkoutDay(
@@ -63,6 +59,5 @@ fun WorkoutDayPreview() {
         isRest = true,
         id = "123"
     )
-    WorkoutDayItem(item = item, 2.dp) {
-    }
+    WorkoutDayItem(item = item)
 }

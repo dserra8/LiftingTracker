@@ -10,4 +10,13 @@
     <string name="next">Next</string>
     <string name="finish">Finish</string>
     <string name="choose_muscle_groups">Choose Muscle Groups for Day %d</string>
+
+<!--App Bar titles-->
+    <string name="home_screen_title">Home</string>
+    <string name="workout_screen_title">Workout</string>
+
+<!--    Common Strings-->
+    <string name="weight">Weight</string>
+    <string name="reps">Reps</string>
+
 </resources>
